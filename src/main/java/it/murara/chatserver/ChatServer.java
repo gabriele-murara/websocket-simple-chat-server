@@ -38,7 +38,8 @@ public class ChatServer extends WebSocketServer {
     @Override
     public void onMessage(WebSocket ws, String string) {
         System.out.println("New Message: " + string);
-        String msg = "Grazie per la tua segnalazione. Il messaggio '%s' è stato ricevuto dal server";
+        String msg = "Grazie per la tua segnalazione. Il messaggio '%s' è ";
+        msg += "stato ricevuto dal server";
         ws.send(String.format(msg, string));
     }
 
